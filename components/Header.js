@@ -18,19 +18,19 @@ export default function Header() {
       <nav className="col-span-7 flex justify-end">
         <ul className=" flex items-center gap-8">
           <li className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
-            About
+            <a href="#about"> About</a>
           </li>
           <li className="text-center text-xl font-normal text-dark-blue hover:text-green transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
-            Partners
+            <a href="#partners">Partners</a>
           </li>
           <li className="text-center text-xl font-normal text-dark-blue hover:text-yellow transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
-            Events
+            <a href="#events">Events</a>
           </li>
           <li className="text-center text-xl font-normal text-dark-blue hover:text-light-blue transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
-            Team
+            <a href="#team">Team</a>
           </li>
           <li className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
-            FAQ
+            <a href="#faq">FAQ</a>
           </li>
         </ul>
       </nav>

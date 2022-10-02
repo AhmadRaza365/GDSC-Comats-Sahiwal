@@ -60,7 +60,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="col-start-2 col-span-10 py-16">
+      <section 
+        id="about"
+       className="col-start-2 col-span-10 py-16">
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           About GDSC
         </h2>
@@ -104,7 +106,7 @@ export default function Home() {
           </div>
         </section>
       </section>
-      <section className="col-start-2 col-span-10 py-16">
+      <section id="partners" className="col-start-2 col-span-10 py-16">
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           OUR PARTNERS
         </h2>
