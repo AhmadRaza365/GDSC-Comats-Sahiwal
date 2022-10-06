@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://ahmadraza365.diveintoskills.com"
           target="_blank"
           rel="noreferrer"
-          className="underline"
+          className="text-dark-blue hover:text-green underline font-normal hover:font-bold scale-100 hover:scale-110 transition-all ease-in-out delay-100"
         >
           Ahmad Raza
         </a>

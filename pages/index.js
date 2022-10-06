@@ -24,6 +24,12 @@ import { FaDiscord } from "react-icons/fa";
 export default function Home() {
   const [selectedFaq, setSelectedFaq] = useState(null);
   const [showFaqAnswer, setShowFaqAnswer] = useState(false);
+  const hoverColors = [
+    "text-light-blue",
+    "text-green",
+    "text-yellow",
+    "text-red",
+  ];
 
   const partners = [
     {
@@ -90,7 +96,7 @@ export default function Home() {
             university students to learn development, design thinking, and
             leadership skills.
           </p>
-          <button className="text-base md:text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
+          <button className="text-base md:text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit scale-100 hover:scale-110 transition-transform ease-in-out delay-100">
             <a href="#events">View Upcoming Events</a>
           </button>
         </div>
@@ -232,7 +238,7 @@ export default function Home() {
             <p className="text-xl text-dark-blue text-center">
               Come, learn, share and connect with us in person.
             </p>
-            <button className="m-auto text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
+            <button className="m-auto text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit scale-100 hover:scale-110 transition-transform ease-in-out delay-100">
               <a href="#upcomingEvents">View Upcoming Events</a>
             </button>
           </div>
@@ -296,7 +302,7 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </section>
-        <button className="mx-auto my-3 text-lg font-bold text-white bg-light-blue rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
+        <button className="mx-auto my-3 text-lg font-bold text-white bg-light-blue rounded-lg shadrop-shadow-sm px-5 py-2 w-fit scale-100 hover:scale-110 transition-transform ease-in-out delay-100">
           <a
             href="https://gdsc.community.dev/comsats-university-sahiwal-campus/"
             target="_blank"
@@ -378,7 +384,13 @@ export default function Home() {
                 className="py-2 border-b-2 last:border-b-0 border-[#C2C2C2]/50"
               >
                 <h4
-                  className="cursor-pointer text-lg sm:text-xl font-bold text-dark-blue w-full flex justify-between items-center"
+                  className={`cursor-pointer text-lg sm:text-xl font-bold  w-full flex justify-between items-center ${
+                    selectedFaq === faq.id && showFaqAnswer
+                      ? hoverColors[
+                          Math.floor(Math.random() * hoverColors.length)
+                        ]
+                      : "text-dark-blue"
+                  }`}
                   onClick={() => {
                     setSelectedFaq(faq.id);
                     if (selectedFaq === faq.id) {
@@ -416,22 +428,22 @@ export default function Home() {
           Join us on different social media Platforms
         </h2>
         <ul className="my-5 flex justify-center items-center gap-5">
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-green cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsWhatsapp />
           </li>
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-light-blue cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsFacebook />
           </li>
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-red cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsInstagram />
           </li>
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-green cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsLinkedin />
           </li>
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-light-blue cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <FaDiscord />
           </li>
-          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue hover:text-red cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsGoogle />
           </li>
         </ul>

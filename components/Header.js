@@ -60,19 +60,19 @@ export default function Header() {
         </div>
         <nav className="col-span-6 xl:col-span-7 flex justify-end">
           <ul className="hidden xl:flex items-center gap-8">
-            <li className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
+            <li className="text-center text-xl font-normal text-dark-blue hover:text-red scale-100 hover:scale-110 transition-all ease-in-out delay-100 hover:font-bold cursor-pointer">
               <a href="#about"> About</a>
             </li>
-            <li className="text-center text-xl font-normal text-dark-blue hover:text-green transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
+            <li className="text-center text-xl font-normal text-dark-blue hover:text-green scale-100 hover:scale-110 transition-all ease-in-out delay-100 hover:font-bold cursor-pointer">
               <a href="#partners">Partners</a>
             </li>
-            <li className="text-center text-xl font-normal text-dark-blue hover:text-yellow transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
+            <li className="text-center text-xl font-normal text-dark-blue hover:text-yellow scale-100 hover:scale-110 transition-all ease-in-out delay-100 hover:font-bold cursor-pointer">
               <a href="#events">Events</a>
             </li>
-            <li className="text-center text-xl font-normal text-dark-blue hover:text-light-blue transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
+            <li className="text-center text-xl font-normal text-dark-blue hover:text-light-blue scale-100 hover:scale-110 transition-all ease-in-out delay-100 hover:font-bold cursor-pointer">
               <a href="#team">Team</a>
             </li>
-            <li className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
+            <li className="text-center text-xl font-normal text-dark-blue hover:text-red scale-100 hover:scale-110 transition-all ease-in-out delay-100 hover:font-bold cursor-pointer">
               <a href="#faq">FAQ</a>
             </li>
           </ul>

@@ -35,7 +35,7 @@ export default function EventsCard() {
           <span>0900hrs - 1200hrs (TBD)</span>
         </li>
       </ul>
-      <button className="text-lg text-white font-bold bg-light-blue px-5 py-2 shadow-md rounded-lg w-fit m-auto">
+      <button className="text-lg text-white font-bold bg-light-blue px-5 py-2 shadow-md rounded-lg w-fit m-auto scale-100 hover:scale-110 transition-transform ease-in-out delay-100">
         Attend
       </button>
     </section>

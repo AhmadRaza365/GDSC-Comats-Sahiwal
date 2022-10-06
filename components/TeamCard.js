@@ -20,19 +20,19 @@ export default function TeamCard() {
           MERN Stack Developer, UI/UX designer and Content Creator
         </p>
         <ul className="flex items-center justify-center gap-3">
-          <li className="text-3xl text-dark-blue cursor-pointer">
+          <li className="text-3xl  text-dark-blue hover:text-red cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsGoogle className="" />
           </li>
-          <li className="text-3xl text-dark-blue cursor-pointer">
+          <li className="text-3xl  text-dark-blue hover:text-light-blue cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsLinkedin className="" />
           </li>
-          <li className="text-3xl text-dark-blue cursor-pointer">
+          <li className="text-3xl  text-dark-blue hover:text-light-blue cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsTwitter className="" />
           </li>
-          <li className="text-3xl text-dark-blue cursor-pointer">
+          <li className="text-3xl  text-dark-blue hover:text-green cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsGithub className="" />
           </li>
-          <li className="text-3xl text-dark-blue cursor-pointer">
+          <li className="text-3xl  text-dark-blue hover:text-yellow cursor-pointer scale-100 hover:scale-110 transition-all ease-in-out delay-100">
             <BsGlobe2 className="" />
           </li>
         </ul>
@@ -42,8 +42,6 @@ export default function TeamCard() {
           <Image
             src="/images/profile.jpg"
             alt="team card"
-            // width={700}
-            // height={700}
             layout="fill"
             objectFit="cover"
           />
