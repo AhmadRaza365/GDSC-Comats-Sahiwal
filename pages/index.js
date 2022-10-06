@@ -79,23 +79,22 @@ export default function Home() {
 
   return (
     <main className="grid grid-cols-12 gap-2">
-      <section className="col-start-2 col-span-10 flex justify-between items-center py-20">
-        <div className="w-1/2 flex flex-col gap-4">
-          <h1 className="text-3xl font-bold text-dark-blue">
+      <section className="col-start-2 col-span-10 flex flex-col-reverse sm:flex-row justify-between items-center gap-3 py-5 md:py-20">
+        <div className="w-full lg:w-1/2 flex flex-col gap-2 sm:gap-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-dark-blue">
             Google Developer Student Clubs
-            <br />
-            Comsats Sahiwal
+            <br className="hidden lg:block" /> Comsats Sahiwal
           </h1>
-          <p className="text-xl text-dark-blue w-3/5 text-justify">
+          <p className="text-lg md:text-xl text-dark-blue w-full lg:w-3/5 text-justify">
             Developer Student Clubs is a Google Developers program for
             university students to learn development, design thinking, and
             leadership skills.
           </p>
-          <button className="text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
-            View Upcoming Events
+          <button className="text-base md:text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
+            <a href="#events">View Upcoming Events</a>
           </button>
         </div>
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <div>
             <Image
               src="/images/gdscAnimation.svg"
@@ -106,12 +105,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section id="about" className="col-start-2 col-span-10 py-16">
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           About GDSC
         </h2>
-        <section className="flex justify-between gap-12 mt-16">
-          <div className="w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-green/50 shadow-2xl">
+        <section className="flex flex-col lg:flex-row justify-between gap-12 mt-16">
+          <div className="w-full lg:w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-green/50 shadow-2xl">
             <p className="text-6xl text-green drop-shadow-lg">
               <IoRocketOutline />
             </p>
@@ -124,7 +124,7 @@ export default function Home() {
               students, towards employability.
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-red/30 shadow-2xl">
+          <div className="w-full lg:w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-red/30 shadow-2xl">
             <p className="text-6xl text-red drop-shadow-lg">
               <RiLightbulbFlashLine />
             </p>
@@ -135,7 +135,7 @@ export default function Home() {
               changemakers.
             </p>
           </div>
-          <div className="w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-yellow/30 shadow-2xl">
+          <div className="w-full lg:w-1/3 flex flex-col gap-4 p-5 rounded-lg bg-yellow/30 shadow-2xl">
             <p className="text-6xl text-yellow drop-shadow-lg">
               <BsPeople />
             </p>
@@ -150,7 +150,8 @@ export default function Home() {
           </div>
         </section>
       </section>
-      <section id="partners" className="col-start-2 col-span-10 py-16">
+
+      <section id="partners" className="col-start-2 col-span-10 py-10 lg:py-16">
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           OUR PARTNERS
         </h2>
@@ -191,7 +192,7 @@ export default function Home() {
             className=""
           >
             {partners.map((partner, index) => (
-              <SwiperSlide key={index} className="pt-24 pb-14 h-full">
+              <SwiperSlide key={index} className="pt-24 pb-16 h-full">
                 <PartnersCard
                   key={index}
                   name={partner.name}
@@ -202,12 +203,13 @@ export default function Home() {
           </Swiper>
         </section>
       </section>
-      <section id="events" className="col-start-2 col-span-10 pt-16 pb-6">
+
+      <section id="events" className="col-start-2 col-span-10 pt-5 lg:pt-16 pb-6">
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Events & Workshops
         </h2>
-        <section className="flex justify-between items-center gap-24 pt-5">
-          <div className="w-2/5">
+        <section className="flex flex-col sm:flex-row justify-between items-center gap-24 pt-5">
+          <div className="w-4/5  md:w-2/5">
             <div className="relative">
               <Image
                 src="/images/seminar.svg"
@@ -217,8 +219,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-3/5 flex flex-col items-center gap-6">
-            <p className="text-xl text-dark-blue text-center w-10/12">
+          <div className="w-full md:w-3/5 flex flex-col items-center gap-4 md:gap-6">
+            <p className="text-lg md:text-xl text-dark-blue text-center w-full md:w-10/12">
               Google Developer Student Club CUI Sahiwal is inspired by the
               Google Developers&lsquo; Family. The motive is to create a local
               ecosystem of Developers in and around the Campus. And have fun
@@ -233,6 +235,7 @@ export default function Home() {
           </div>
         </section>
       </section>
+
       <section
         id="upcomingEvents"
         className="col-start-2 col-span-10 pt-0 pb-16 flex flex-col "
@@ -240,12 +243,61 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Upcoming Events
         </h2>
-        <section className="flex justify-between gap-16 py-10">
+        {/* <section className="flex flex-col md:flex-row justify-between gap-16 py-10">
           <EventsCard />
           <EventsCard />
           <EventsCard />
+        </section> */}
+        <section className="">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={20}
+            speed={1000}
+            grabCursor={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            modules={[Autoplay, Pagination]}
+            breakpoints={{
+              10: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              700: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              1000: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1120: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide className="pt-16 pb-14 px-3  h-full">
+              <EventsCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-16 pb-14 px-3 h-full">
+              <EventsCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-16 pb-14 px-3 h-full">
+              <EventsCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-16 pb-14 px-3 h-full">
+              <EventsCard />
+            </SwiperSlide>
+          </Swiper>
         </section>
-        <button className="m-auto text-lg font-bold text-white bg-light-blue rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
+        <button className="mx-auto my-3 text-lg font-bold text-white bg-light-blue rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
           View More
         </button>
       </section>
@@ -254,13 +306,58 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Our Team
         </h2>
-        <section className="flex justify-center flex-wrap gap-x-16 gap-y-32 py-28">
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
-          <TeamCard />
+        <section>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={60}
+            speed={1000}
+            grabCursor={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            modules={[Autoplay, Pagination]}
+            breakpoints={{
+              10: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+
+              630: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1000: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1100: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+              },
+            }}
+            className=""
+          >
+            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
+              <TeamCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
+              <TeamCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
+              <TeamCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
+              <TeamCard />
+            </SwiperSlide>
+            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
+              <TeamCard />
+            </SwiperSlide>
+          </Swiper>
         </section>
       </section>
 
@@ -268,15 +365,15 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Frequently Asked Questions
         </h2>
-        <section className="flex justify-between items-center my-8">
-          <section className="px-4 py-2 w-1/2 bg-[#C2C2C2]/30 rounded-lg drop-shadow-lg">
+        <section className="flex flex-col-reverse md:flex-row justify-between items-center my-8">
+          <section className="px-4 mr-0 md:mr-10 lg:mr-0 py-2 w-full lg:w-1/2 bg-[#C2C2C2]/30 rounded-lg drop-shadow-lg">
             {faqs.map((faq, index) => (
               <div
                 key={index}
                 className="py-2 border-b-2 last:border-b-0 border-[#C2C2C2]/50"
               >
                 <h4
-                  className="cursor-pointer text-xl font-bold text-dark-blue w-full flex justify-between"
+                  className="cursor-pointer text-lg sm:text-xl font-bold text-dark-blue w-full flex justify-between items-center"
                   onClick={() => {
                     setSelectedFaq(faq.id);
                     if (selectedFaq === faq.id) {
@@ -290,13 +387,15 @@ export default function Home() {
                   <BiChevronDown className="text-4xl" />
                 </h4>
                 {showFaqAnswer && selectedFaq === faq.id && (
-                  <p className="text-lg text-dark-blue my-2">{faq.answer}</p>
+                  <p className="text-base sm:text-lg text-dark-blue my-2">
+                    {faq.answer}
+                  </p>
                 )}
               </div>
             ))}
           </section>
-          <div>
-            <div className="relative w-96">
+          <div className="">
+            <div className="relative w-2/3 m-auto md:w-72 lg:w-80">
               <Image
                 src="/images/FAQs.svg"
                 alt="faq"
@@ -312,22 +411,22 @@ export default function Home() {
           Join us on different social media Platforms
         </h2>
         <ul className="my-5 flex justify-center items-center gap-5">
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <BsWhatsapp />
           </li>
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <BsFacebook />
           </li>
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <BsInstagram />
           </li>
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <BsLinkedin />
           </li>
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <FaDiscord />
           </li>
-          <li className="text-5xl text-dark-blue">
+          <li className="text-3xl sm:text-4xl lg:text-5xl text-dark-blue">
             <BsGoogle />
           </li>
         </ul>

@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import { HiMenu } from "react-icons/hi";
+import { IoClose } from "react-icons/io5";
 
 export default function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <>
       <Head>
@@ -41,8 +44,8 @@ export default function Header() {
         <meta name="twitter:image" content="/images/gdscLogo.svg" />
       </Head>
 
-      <header className="z-10 sticky top-0 bg-white/70 py-3 shadow-lg backdrop-blur-md col-span-12 grid grid-cols-12 gap-2">
-        <div className="flex items-start gap-4 col-start-2 col-span-3 cursor-pointer">
+      <header className="z-10 sticky top-0 bg-white/70 py-3 shadow-lg backdrop-blur-md col-span-12 flex justify-between items-center xl:grid grid-cols-12 gap-2 px-4 sm:px-16 md:px-24 xl:px-0">
+        <div className="flex items-start gap-4 col-start-2 col-span-3  cursor-pointer">
           <div className="relative w-14">
             <Image
               src="/images/gdscLogo.svg"
@@ -55,8 +58,8 @@ export default function Header() {
             GDSC CUI Sahiwal
           </h1>
         </div>
-        <nav className="col-span-7 flex justify-end">
-          <ul className=" flex items-center gap-8">
+        <nav className="col-span-6 xl:col-span-7 flex justify-end">
+          <ul className="hidden xl:flex items-center gap-8">
             <li className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer">
               <a href="#about"> About</a>
             </li>
@@ -74,6 +77,64 @@ export default function Header() {
             </li>
           </ul>
         </nav>
+        <button
+          className="block xl:hidden text-3xl font-normal text-dark-blue cursor-pointer border-[1px] border-gray-100 rounded-lg p-1"
+          onClick={() => setOpenMenu(!openMenu)}
+        >
+          <HiMenu />
+        </button>
+        {openMenu && (
+          <>
+            <nav className="block xl:hidden absolute top-0 right-0 w-2/3 sm:w-1/3 h-screen bg-yellow">
+              <ul className="flex flex-col xl:hidden items-center pt-20 gap-8">
+                <li
+                  className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  <a href="#about"> About</a>
+                </li>
+                <li
+                  className="text-center text-xl font-normal text-dark-blue hover:text-green transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  <a href="#partners">Partners</a>
+                </li>
+                <li
+                  className="text-center text-xl font-normal text-dark-blue hover:text-green transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  <a href="#events">Events</a>
+                </li>
+                <li
+                  className="text-center text-xl font-normal text-dark-blue hover:text-light-blue transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  <a href="#team">Team</a>
+                </li>
+                <li
+                  className="text-center text-xl font-normal text-dark-blue hover:text-red transition-all ease-in-out delay-75 hover:text-2xl hover:font-bold cursor-pointer"
+                  onClick={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  <a href="#faq">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <IoClose
+              className="block xl:hidden text-4xl absolute top-5 right-5"
+              onClick={() => setOpenMenu(!openMenu)}
+            />
+          </>
+        )}
       </header>
     </>
   );

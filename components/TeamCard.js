@@ -10,7 +10,7 @@ import {
 
 export default function TeamCard() {
   return (
-    <section className="w-72 rounded-lg drop-shadow-xl relative flex flex-col bg-[url('/images/teamcardBG.png')] bg-cover border-2 border-gray-50">
+    <section className=" rounded-lg drop-shadow-xl relative flex flex-col bg-[url('/images/teamcardBG.png')] bg-cover border-2 border-gray-50">
       <div className="z-[2] px-4 pt-24 pb-10 flex flex-col gap-5">
         <h2 className="text-xl font-bold text-dark-blue text-center">
           Ahmad Raza
@@ -42,8 +42,8 @@ export default function TeamCard() {
           <Image
             src="/images/profile.jpg"
             alt="team card"
-            width={700}
-            height={700}
+            // width={700}
+            // height={700}
             layout="fill"
             objectFit="cover"
           />
