@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <main className="grid grid-cols-12 gap-2">
       <section className="col-start-2 col-span-10 flex flex-col-reverse sm:flex-row justify-between items-center gap-3 py-5 md:py-20">
-        <div className="w-full lg:w-1/2 flex flex-col gap-2 sm:gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col gap-3 sm:gap-4">
           <h1 className="text-2xl md:text-3xl font-bold text-dark-blue">
             Google Developer Student Clubs
             <br className="hidden lg:block" /> Comsats Sahiwal
@@ -204,7 +204,10 @@ export default function Home() {
         </section>
       </section>
 
-      <section id="events" className="col-start-2 col-span-10 pt-5 lg:pt-16 pb-6">
+      <section
+        id="events"
+        className="col-start-2 col-span-10 pt-5 lg:pt-16 pb-6"
+      >
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Events & Workshops
         </h2>
@@ -230,7 +233,7 @@ export default function Home() {
               Come, learn, share and connect with us in person.
             </p>
             <button className="m-auto text-lg font-bold text-white bg-green rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
-              View Upcoming Events
+              <a href="#upcomingEvents">View Upcoming Events</a>
             </button>
           </div>
         </section>
@@ -243,11 +246,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-dark-blue text-center">
           Upcoming Events
         </h2>
-        {/* <section className="flex flex-col md:flex-row justify-between gap-16 py-10">
-          <EventsCard />
-          <EventsCard />
-          <EventsCard />
-        </section> */}
+
         <section className="">
           <Swiper
             slidesPerView={3}
@@ -298,7 +297,13 @@ export default function Home() {
           </Swiper>
         </section>
         <button className="mx-auto my-3 text-lg font-bold text-white bg-light-blue rounded-lg shadrop-shadow-sm px-5 py-2 w-fit">
-          View More
+          <a
+            href="https://gdsc.community.dev/comsats-university-sahiwal-campus/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View More
+          </a>
         </button>
       </section>
 
