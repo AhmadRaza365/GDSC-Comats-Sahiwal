@@ -33,20 +33,122 @@ export default function Home() {
 
   const partners = [
     {
-      name: "Microsoft Learn Student Ambassadors CUI Sahiwal",
-      image: "/images/gdscLogo.svg",
-    },
-    {
-      name: "Microsoft Learn ",
-      image: "/images/gdscLogo.svg",
-    },
-    {
-      name: "Microsoft ",
-      image: "/images/gdscLogo.svg",
+      name: "Comsats Computer Science Society",
+      image: "/images/cssLogo.webp",
     },
     {
       name: "Microsoft Learn Student Ambassadors CUI Sahiwal",
-      image: "/images/gdscLogo.svg",
+      image: "/images/mlsaLogo.webp",
+    },
+    {
+      name: "GitHub",
+      image: "/images/githubLogo.webp",
+    },
+    {
+      name: "MetaSchool",
+      image: "/images/metaschoolLogo.webp",
+    },
+  ];
+
+  const teamMembers = [
+    {
+      name: "Abdul Raheem",
+      image: "/images/team/abdulRaheemProfile.webp",
+      role: "GDSC Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/xfarooqi/",
+      twitter: "https://twitter.com/X_Farooqi",
+      github: "https://github.com/XFarooqi",
+      website: null,
+      google: "https://gdsc.community.dev/u/mytnhw/",
+    },
+    {
+      name: "Ahmad Raza",
+      image: "/images/team/ahmadRazaProfile.webp",
+      role: "Web Development Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/ahmadraza365/",
+      twitter: "https://twitter.com/AhmadRaza365",
+      github: "https://github.com/AhmadRaza365",
+      website: "https://ahmadraza365.diveintoskills.com/",
+      google: "https://developers.google.com/profile/u/ahmadraza_365",
+    },
+    {
+      name: "Ahmad Chaudhary",
+      image: "/images/team/ahmadChProfile.webp",
+      role: "Event Management Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/muhammad-ahmad-662835153",
+      twitter: "https://twitter.com/M_Ahmad_9",
+      github: "https://github.com/Ahmad-ProDev",
+      website: null,
+      google: "https://developers.google.com/profile/u/ahmadch",
+    },
+    {
+      name: "Arslan Khalid",
+      image: "/images/team/arslanKhalidProfile.webp",
+      role: "Graphics Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/arslan4real/",
+      twitter: "https://twitter.com/arslaann44",
+      github: "https://github.com/arslan4real",
+      website: null,
+      google: "https://developers.google.com/profile/u/arslan4real",
+    },
+    {
+      name: "Habib ur Rehman",
+      image: "/images/team/habib-ur-RehmanProfile.webp",
+      role: "Public Relation Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/hafiz-habib-ur-rehman-021637205/",
+      twitter: "https://twitter.com/thehabiburrehma",
+      github: "https://github.com/thehabiburrehman",
+      website: null,
+      google: "https://developers.google.com/profile/u/thehabiburrehman",
+    },
+    {
+      name: "Hamza Ghafoor",
+      image: "/images/team/hamzaGhafoorProfile.webp",
+      role: "Creative Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/hamza-ghafoor-a2247022a",
+      twitter: "https://twitter.com/HZG4H?t=RPNohD9N4W58BkvQTpepBQ&s=08",
+      github: null,
+      website: null,
+      google: "https://developers.google.com/profile/u/106856703235903647967",
+    },
+    {
+      name: "Iqra Mahmood",
+      image: "/images/team/iqraMahmoodProfile.webp",
+      role: "Machine Learning Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/hafiza-iqra-mahmood/",
+      twitter: "https://twitter.com/Iqra_Multaji",
+      github: "https://github.com/IqraMahmood",
+      website: "https://medium.com/@iqramultaji",
+      google: "https://developers.google.com/profile/u/iqramahmood",
+    },
+    {
+      name: "Nabeel Ahmad",
+      image: "/images/team/nabeelAhmadProfile.webp",
+      role: "Competative Programming Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/nabeelahmedjh/",
+      twitter: "https://twitter.com/nabeelahmedjh",
+      github: "https://github.com/nabeelahmedjh",
+      website: null,
+      google: "https://developers.google.com/profile/u/116285414724361073820",
+    },
+    {
+      name: "Eatsam Ul Haq",
+      image: "/images/team/eatsam-ul-HaqProfile.webp",
+      role: "Technical Lead",
+      bio: "",
+      linkedin: "https://www.linkedin.com/in/eatsam-ul-haq-a40b431b5",
+      twitter: null,
+      github: null,
+      website: null,
+      google: "https://developers.google.com/profile/u/108213361076294949777",
     },
   ];
 
@@ -353,21 +455,21 @@ export default function Home() {
             }}
             className=""
           >
-            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
-              <TeamCard />
-            </SwiperSlide>
-            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
-              <TeamCard />
-            </SwiperSlide>
-            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
-              <TeamCard />
-            </SwiperSlide>
-            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
-              <TeamCard />
-            </SwiperSlide>
-            <SwiperSlide className="pt-24 pb-14 px-4 h-full">
-              <TeamCard />
-            </SwiperSlide>
+            {teamMembers.map((member, index) => (
+              <SwiperSlide key={index} className="pt-24 pb-14 px-4 h-full">
+                <TeamCard
+                  name={member.name}
+                  image={member.image}
+                  role={member.role}
+                  bio={member.bio}
+                  linkedin={member.linkedin}
+                  github={member.github}
+                  twitter={member.twitter}
+                  google={member.google}
+                  website={member.website}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </section>
       </section>
